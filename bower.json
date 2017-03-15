@@ -12,6 +12,7 @@
     "tests"
   ],
   "dependencies": {
-    "zepto": "^1.2.0"
+    "zepto": "^1.2.0",
+    "seajs": "^3.0.0"
   }
 }

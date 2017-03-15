@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*去除点击半透明色块*/
-*{ margin:0; padding:0; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+*{ margin:0; padding:0; -webkit-tap-highlight-color: rgba(0,0,0,0);/*让容器在计算宽度的时候，从边框位置开始计算*/
+    box-sizing: border-box;}
 /*禁止横竖屏切换时字体大小缩放*/
 html{-webkit-text-size-adjust: 100%;}
 body { font-size:12px; color:#3C3C3C; font-family:Verdana, Microsoft YaHei, Simsun; background:#fff;  }
@@ -25,4 +26,22 @@ input,textarea{ border:none; -webkit-appearance: none; }
 }
 .clearfix{
     zoom:1;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*公共代码*/
+body{
+    background-color: #eee;
+}
+.container{
+    width:100%;
+    max-width:640px;
+    min-width:320px;
+    margin:0 auto;
+    background-color: white;
 }
