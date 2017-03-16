@@ -24,7 +24,7 @@
 // }
 define(function(require , exports , module){
     // 动态设置搜索栏背景颜色
-    function searchBarColor(){
+    module.exports = function(){
         var searchbar = document.getElementsByClassName("search-bar");
         var banner = document.getElementsByClassName("banner");
         var bannerHeight = banner[0].offsetHeight;
@@ -40,5 +40,4 @@ define(function(require , exports , module){
             searchbar[0].style.backgroundColor="rgba(233,35,34,"+alpha+")";
         }
     }
-    module.exports = searchBarColor();
 })

@@ -7,6 +7,7 @@
     min-width:320px;
     height: 40px;
     position:fixed;
+    z-index:10;
 }
 .logo{
     position:absolute;
@@ -62,13 +63,15 @@
 /*banner*/
 .banner{
     width: 100%;
-    overflow:hidden;
+    overflow: hidden;
+    position: relative;
 }
 .banner ul{
-    width:800%;
+    width:1000%;
+    transform:translate(-10%);
 }
 .banner ul li{
-    width:12.5%;
+    width:10%;
     float:left;
 }
 .banner ul li a{
