@@ -34,8 +34,8 @@
     <script src="touch.js"></script>
     <script>
         $(function(){
-            $("#box1").on("click" , function( e ){
-                console.log(  "1" );
+            $("#box1")[0].addEventListener("click" , function( e ){
+                console.log( "1" );
             });
             $("#box2").on("singleTap" , function(){
                 console.log(2 );
