@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    var div = document.getElementsByTagName("div");
+    var touchstartTime = 0;
+    var unMove = true;
+    //        单击事件
+//            div[0].addEventListener("touchstart" , function( e ){
+//                touchstartTime = Date.now();
+//                console.log( touchstartTime );
+//                console.time("aa");
+//            });
+//            div[0].addEventListener("touchmove" , function( e ){
+//                unMove = false ;
+//            });
+//            div[0].addEventListener("touchend" , function( e ){
+//                if( unMove && (Date.now() - touchstartTime) < 150 ){
+//                    console.log( "tap" );
+//                }
+//                console.timeEnd("aa");
+//                console.log( window )
+//            })
+//            单击事件封装
+//    function tap(obj , callback){
+//                if( obj && typeof obj === "object" && callback && typeof callback === "function" ){
+//                    obj.addEventListener("touchstart" , function( e ){
+//                        touchstartTime = Date.now();
+//                    });
+//                    obj.addEventListener("touchmove" , function( e ){
+//                        unMove = false ;
+//                    });
+//                    obj.addEventListener("touchend" , function( e ){
+//                        if( unMove && (Date.now() - touchstartTime) < 150 ){
+//                            callback( e );
+//                        }
+//                        unMove = true;
+//                    })
+//                }
+//
+//    }
+//    tap(div[0] , function( e ){
+//        console.log( e.target );
+//    });
+    //        长按事件
+//    div[0].addEventListener("touchstart", function ( e ) {
+////        e.preventDefault();
+//        touchstartTime = Date.now();
+//    });
+//    div[0].addEventListener("touchmove", function () {
+//        unMove = false;
+//    });
+//    div[0].addEventListener("touchend", function ( e ) {
+////        e.preventDefault();
+//                    if( unMove && (Date.now() - touchstartTime) > 800 ){
+//                        console.log( "longPress" );
+//                    }
+//    })
+    var timeID;
+    div[0].addEventListener("touchstart" , function(e){
+        timeID = setTimeout(function(){
+            console.log( 1 )
+        },800)
+    });
+    div[0].addEventListener("touchend" , function(e){
+        clearTimeout(timeID);
+    })
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
     box-sizing: border-box;}
 /*禁止横竖屏切换时字体大小缩放*/
 html{-webkit-text-size-adjust: 100%;}
-body { font-size:12px; color:#3C3C3C; font-family:Verdana, Microsoft YaHei, Simsun; background:#fff;  }
+body { font-size:12px; color:#3C3C3C; font-family:Verdana, Microsoft YaHei, Simsun; background:#fff;  -webkit-overflow-scrolling: touch;overflow-scrolling: touch; }
 /*html5标签转为块级元素*/
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {display: block;}
 fieldset, img { border:0; display:block;}

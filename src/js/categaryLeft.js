@@ -3,6 +3,7 @@
  */
 define(function(require , exports , module ){
     module.exports=function(){
+        // 滑动事件
         var categaryLeft = document.getElementsByClassName("categary-left");
         var categaryList = document.getElementsByClassName("categary-list");
         var categaryLeftHeight = categaryLeft[0].offsetHeight;
@@ -26,12 +27,14 @@ define(function(require , exports , module ){
             touchmoveDistance = e.touches[0].clientY - touchstartClientY;
             if( touchendClienY+touchmoveDistance > 100 ){
                 touchendClienY = 100;
-                moveTransition( "all 0.2s" );
-                moveTransform( touchendClienY );
+                return;
+                // moveTransition( "all 0.2s" );
+                // moveTransform( touchendClienY );
             }else if( touchendClienY+touchmoveDistance < (-HeightDistance+-100) ){
                 touchendClienY = (-HeightDistance+-100);
-                moveTransition( "all 0.2s" );
-                moveTransform( touchendClienY );
+                return;
+                // moveTransition( "all 0.2s" );
+                // moveTransform( touchendClienY );
             }else{
                 moveTransition( "all 0.2s" );
                 moveTransform( touchendClienY+touchmoveDistance );
@@ -50,5 +53,6 @@ define(function(require , exports , module ){
                 moveTransform( touchendClienY );
             }
         });
+        // 点击事件
     }
 })
